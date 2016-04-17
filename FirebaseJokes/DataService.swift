@@ -36,4 +36,11 @@ class DataService {
         return _JOKE_REF
     }
     
+    func createNewAccount(uid: String, user: Dictionary<String, String>){
+        // hail new user!
+        
+        USER_REF.childByAppendingPath(uid).setValue(user)
+        
+    }
+    
 }
